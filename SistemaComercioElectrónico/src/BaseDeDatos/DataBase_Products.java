@@ -2,6 +2,8 @@
 package BaseDeDatos;
 
 import Entidades.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DataBase_Products {
@@ -31,12 +33,23 @@ public class DataBase_Products {
         Producto producto19 = new Producto(19L, "Telescopio 'Observador del Cielo'", 179.99, 30, "Un telescopio de alta calidad para observar las maravillas del cielo nocturno. ¡Descubre el universo!");
         Producto producto20 = new Producto(20L, "Caja de Herramientas 'Hazlo Tú Mismo'", 39.99, 40, "Una caja de herramientas completa para tus proyectos de bricolaje. ¡Conviértete en un maestro del bricolaje!");
 
-        productos = List.of ( producto1, producto2, producto3, producto4, producto5, producto6, producto7,
-                producto8, producto9, producto10, producto11, producto12,
-                producto13, producto14, producto15, producto16, producto17,
-                producto18, producto19, producto20);
+        productos = new ArrayList<>(Arrays.asList(producto1, producto2, producto3, producto4, producto5, producto6, producto7,
+            producto8, producto9, producto10, producto11, producto12,
+            producto13, producto14, producto15, producto16, producto17,
+            producto18, producto19, producto20));
 
         return productos;
     }
+    
+    public static Producto getProductById(Long id){
+        for (Producto products : productos) {
+            if (id.equals(products.getId())){
+                return products;
+            }
+        }
+        return null;
+    }
+
+    
     
 }
