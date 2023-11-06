@@ -38,7 +38,7 @@ public class SistemaComercioElectrónico {
             System.out.print("Ingresa el codigo del producto que deseas comprar :");
             int codProducto = leer.nextInt();
             Producto producto = new Producto();
-            CarritoDeCompra carrito = new CarritoDeCompra(id,cliente.getId(),HashMap<>);
+            CarritoDeCompra carrito = new CarritoDeCompra(cliente.getId(),);
         }
         
         
