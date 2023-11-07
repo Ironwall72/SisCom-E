@@ -1,10 +1,13 @@
 
 package sistemacomercioelectrónico;
 
+import BaseDeDatos.DataBase_Products;
+import static BaseDeDatos.DataBase_Products.initProducts;
 import Entidades.CarritoDeCompra;
 import Entidades.Cliente;
 import Entidades.Producto;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class SistemaComercioElectrónico {
@@ -12,8 +15,7 @@ public class SistemaComercioElectrónico {
     public static void main(String[] args) {
         
         Scanner leer = new Scanner(System.in);
-        //Cliente cliente = null;
-        //Object CarritoDeCompra = null;
+        List listaProductos = initProducts();
         
         System.out.print("Ingrese su DNI: ");
         int id = leer.nextInt();
@@ -37,8 +39,8 @@ public class SistemaComercioElectrónico {
         while (opcion.equalsIgnoreCase("S")){
             System.out.print("Ingresa el codigo del producto que deseas comprar :");
             int codProducto = leer.nextInt();
-            Producto producto = new Producto();
-            CarritoDeCompra carrito = new CarritoDeCompra(cliente.getId(),);
+            
+            
         }
         
         

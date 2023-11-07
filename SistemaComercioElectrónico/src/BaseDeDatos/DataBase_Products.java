@@ -5,6 +5,7 @@ import Entidades.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class DataBase_Products {
     
@@ -50,6 +51,6 @@ public class DataBase_Products {
         return null;
     }
 
-    
+    Map.Entry
     
 }
